@@ -71,6 +71,13 @@ body {
   width: 18rem;
 }
 
+.journey-leaf {
+  width: 12rem !important;
+  height: 15rem;
+  right: 0rem;
+  display: none;
+}
+
 .journey img {
   width: 19rem;
 }
@@ -229,6 +236,10 @@ input {
     height: 28rem;
   }
 
+  .ask-us {
+    margin-top: 5rem;
+  }
+
   .ask-us form {
     height: 24rem;
     width: 25rem;
@@ -286,6 +297,11 @@ input {
 
   .hero-right {
     height: 31rem;
+  }
+
+  .journey-leaf {
+    display: inline;
+    right: 0rem;
   }
 
   .journey img {
@@ -353,6 +369,11 @@ input {
 
   .plant-collection img {
     width: 22rem;
+  }
+
+  .journey-leaf {
+    width: 22rem !important;
+    height: 18rem;
   }
 
   .journey img {
