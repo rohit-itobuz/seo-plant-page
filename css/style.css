@@ -71,6 +71,11 @@ body {
   width: 18rem;
 }
 
+.collection-icon-left:hover,
+.collection-icon-right:hover {
+  scale: 1.15;
+}
+
 .journey-leaf {
   width: 12rem !important;
   height: 15rem;
@@ -130,6 +135,8 @@ input {
 
 .choosing:hover {
   background-color: #3e8847;
+  transition: 1s;
+  scale: 1.02;
 }
 
 .choosing:hover h4 {
@@ -168,6 +175,12 @@ input {
 .clients-icon-left,
 .clients-icon-right {
   font-size: 3rem;
+}
+
+.clients-icon-left:hover,
+.clients-icon-right:hover
+{
+  scale: 1.1;
 }
 
 .clients-image {
