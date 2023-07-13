@@ -20,7 +20,7 @@
 
 <body>
   <!-- nav section start -->
-  <nav class="navbar navbar-expand-lg d-flex gap-lg-0 px-5 px-lg-0 justify-content-around">
+  <nav class="navbar navbar-expand-lg px-2 px-md-5 px-lg-0 justify-content-around">
     <div class="container-fluid">
       <div class="nav-left d-flex mt-3 mx-lg-4">
         <p class="nav-my fs-3 g7D807E px-xl-5">
@@ -50,7 +50,7 @@
           </li>
         </ul>
         <div class="d-flex gap-md-4 justify-content-center">
-          <form class="d-flex gap-md-3 border rounded-pill p-1 px-2 px-md-3" role="search">
+          <form class="d-flex gap-md-3 border rounded-pill p-1 px-md-3" role="search">
             <input class="search border-0 gC0C0C0" type="search" placeholder="Search Products..." aria-label="Search" />
             <a href="#"><i class="fa-solid fa-magnifying-glass text-muted"></i></a>
           </form>
@@ -63,41 +63,58 @@
   <!-- nav section end -->
 
   <!-- hero section start -->
-  <section class="hero d-flex flex-column flex-md-row m-3 m-md-0 justify-content-between">
-    <div class="hero-left d-flex flex-column gap-4 mx-md-4 mt-5 mt-lg-4 gap-xl-5">
-      <p class="g09270D fs-5">
-        <span class="gD4D4D4">⎯⎯</span>&nbsp; Love nature
-      </p>
-      <h1 class="hero-heading g3E8847">
-        Take a new<br />
-        friend to your<br />
-        home
-      </h1>
-      <div class="hero-info mt-lg-4 mt-xl-5 fw-semibold">
-        <a class="g09270D link-underline link-underline-opacity-0 text-black border rounded-pill p-2 px-3 px-md-4 px-xl-5"
-          href="#">Plant Care</a>
-        <a class="gFFFFFF buy-plant link-underline link-underline-opacity-0 rounded-pill p-2 px-3 px-md-4 mx-4 mx-xl-5 px-xl-5"
-          href="#">Buy a plant</a>
+  <section>
+    <div class="hero d-flex flex-column flex-md-row m-3 m-md-0">
+      <div class="hero-left d-flex flex-column gap-4 mx-md-4 mt-5 mt-md-4 gap-xl-5 mx-lg-5">
+        <p class="g09270D fs-5">
+          <span class="gD4D4D4">⎯⎯</span>&nbsp; Love nature
+        </p>
+        <h1 class="hero-heading g3E8847">
+          Take a new<br />
+          friend to your<br />
+          home
+        </h1>
+        <div class="hero-info mt-lg-4 mt-xl-0 fw-semibold">
+          <a class="g09270D link-underline link-underline-opacity-0 text-black border rounded-pill p-2 px-3 px-md-4 px-xl-5"
+            href="#">Plant Care</a>
+          <a class="gFFFFFF buy-plant link-underline link-underline-opacity-0 rounded-pill p-2 px-3 px-md-4 mx-4 mx-xl-5 px-xl-5"
+            href="#">Buy a plant</a>
+        </div>
+        <div class="d-flex gap-4 mt-3 mt-md-5 gap-xl-5">
+          <a class="g3E8847" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="g3E8847" href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a class="g3E8847" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
       </div>
-      <div class="d-flex gap-4 mt-3 mt-md-5 gap-xl-5">
-        <a class="g3E8847" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a class="g3E8847" href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a class="g3E8847" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-      </div>
+      <div class="slider-container mt-2">
+          <div class="show-slide transition hero-middle">
+              <img src="./image/plant-leaf.png" alt="leaf-plant">
+          </div>
+          <div class="show-slide transition hero-right">
+              <img src="./image/hero-leaf.png" alt="hero-leaf">
+          </div>
+          <div class="show-slide transition hero-back">
+            <img src="./image/hero-plant.png" alt="hero-plant">
+        </div>
     </div>
-    <div class="hero-middle mt-4 d-flex mt-lg-5">
-      <img class="slider align-self-end" src="/image/hero-slider.png" alt="slider" />
-    </div>
-
-    <div class="hero-right rounded-start"></div>
+  </div>
+    
+  <div class="hero-slider d-flex gap-3 justify-content-center">
+    <button class="left border" onclick="nextSlide(-1)"><i class="fa-solid fa-caret-left fs-2 p-2"></i></button>
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  <button class="right border" onclick="nextSlide(1)"><i class="fa-solid fa-caret-right fs-2 p-2"></i></button>
+  </div>
   </section>
+  
 
   <!-- hero section end -->
 
   <!-- Plant collection section start -->
   <section class="plant-collection m-3 mt-5">
     <h2 class="text-center g09270D py-2">Plant collection</h2>
-    <div class="d-flex flex-column flex-wrap gap-4 flex-md-row justify-content-center fs-5 mt-5 gap-xl-5">
+    <div class="d-flex flex-wrap gap-4 justify-content-center fs-5 mt-5 gap-xl-5">
       <div>
         <img src="/image/bird.png" alt="Bird of paradise" />
         <p class="g09270D py-3">Bird of paradise</p>
@@ -120,8 +137,7 @@
 
   <!-- Our journey section start -->
 
-  
-  <section class="journey d-flex flex-column flex-md-row m-3 me-0  mt-5">
+  <section class="journey d-flex flex-column flex-md-row m-3 me-0 mt-5">
     <div class="journey-left">
       <img class="" src="/image/our-journey.png" alt="our-journey" />
     </div>
@@ -137,15 +153,15 @@
         Get start
       </button>
     </div>
-    <img class="journey-leaf position-absolute" src="/image/journey-top-right.png" alt="leaf">
+    <img class="journey-leaf position-absolute" src="/image/journey-top-right.png" alt="leaf" />
   </section>
   <!-- Our journey section end -->
 
   <!-- Our advantages section start -->
   <section class="m-3 mt-5">
     <h2 class="advantage-heading g09270D mx-md-4 py-2">Our advantages</h2>
-    <div class="d-flex flex-column gap-5 mt-5 flex-wrap flex-md-row justify-content-center justify-content-xl-evenly">
-      <div class="advantage d-flex position-relative">
+    <div class="d-flex gap-5 mt-5 flex-wrap flex-md-row justify-content-center justify-content-xl-evenly">
+      <div class="advantage d-flex position-relative m-2 m-md-0">
         <img class="position-absolute top-50 start-0 translate-middle" src="/image/watering-can1.png"
           alt="watering-can1" />
         <div class="advantage-text p-2 px-5">
@@ -156,7 +172,7 @@
           </p>
         </div>
       </div>
-      <div class="advantage d-flex position-relative">
+      <div class="advantage d-flex position-relative m-2 m-md-0">
         <img class="position-absolute top-50 start-0 translate-middle" src="/image/watering-can2.png"
           alt="watering-can2" />
         <div class="advantage-text p-2 px-5">
@@ -167,7 +183,7 @@
           </p>
         </div>
       </div>
-      <div class="advantage d-flex position-relative">
+      <div class="advantage d-flex position-relative m-2 m-md-0">
         <img class="position-absolute top-50 start-0 translate-middle" src="/image/watering-can3.png"
           alt="watering-can3" />
         <div class="advantage-text p-2 px-5">
@@ -351,5 +367,8 @@
     </div>
   </footer>
   <!-- footer section end -->
+
+  <script src="/js/main.js"></script>
 </body>
+
 </html>

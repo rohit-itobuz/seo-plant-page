@@ -63,9 +63,58 @@ body {
   background-color: #09270d;
 }
 
-.slider {
+.slider-container {
   display: none;
 }
+
+/* slide start */
+.show-slide {
+  display: none;
+}
+
+.left,
+.right {
+  color: rgb(12, 118, 12);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+.left:hover,
+.right:hover {
+  background-color: rgb(255, 191, 0);
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  background-color: #69829c;
+  display: inline-block;
+}
+
+.active,
+.dot:hover {
+  background-color: #3e8646;
+}
+
+.transition {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* scroll end */
 
 .plant-collection img {
   width: 18rem;
@@ -178,8 +227,7 @@ input {
 }
 
 .clients-icon-left:hover,
-.clients-icon-right:hover
-{
+.clients-icon-right:hover {
   scale: 1.1;
 }
 
@@ -206,35 +254,34 @@ input {
 
 @media (min-width: 768px) {
   .hero-left {
-    z-index: 2;
-  }
-
-  .hero-middle {
-    background-image: url(/image/hero-plant.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: 10rem;
-    background-position: center !important;
-    width: 30rem;
-    height: 20rem;
+    position: relative;
     z-index: 1;
   }
 
-  .slider {
-    display: inline;
-    width: 10rem;
-    margin-bottom: -3rem;
-    margin-left: 12rem;
+  .slider-container {
+    display: block;
   }
 
-  .hero-right {
-    background-image: url(/image/hero-leaf.png);
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 15rem;
-    height: 25rem;
+  .hero-middle img {
+    position: absolute;
+    width: 30rem;
+    right: 1rem;
+    z-index: -1;
+  }
+
+  .hero-back img {
+    position: absolute;
+    width: 30rem;
+    right: 1rem;
+    z-index: -1;
+  }
+
+  .hero-right img {
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    right: 1rem;
+    border-radius: 1rem;
     z-index: -1;
   }
 
@@ -295,21 +342,19 @@ input {
     font-size: 3rem;
   }
 
-  .hero-middle {
-    background-size: cover;
-    border-radius: 1rem;
-    left: 15rem;
-    width: 38rem;
-    height: 25rem;
+  .hero-middle img {
+    width: 44rem;
+    right: 0rem;
   }
 
-  .slider {
-    width: 14rem;
-    margin-left: 18rem;
+  .hero-right img {
+    width: 44rem;
+    height: 28rem;
   }
 
-  .hero-right {
-    height: 31rem;
+  .hero-back img {
+    width: 44rem;
+    height: 28rem;
   }
 
   .journey-leaf {
@@ -350,34 +395,29 @@ input {
 
 @media (min-width: 1440px) {
   .hero-left {
-    padding-top: 4rem;
+    padding-left: 2rem;
   }
 
   .hero-heading {
     font-size: 4rem;
   }
 
+  .hero-middle img {
+    width: 62.5rem;
+  }
+
+  .hero-right img {
+    width: 62.5rem;
+    height: 35rem;
+  }
+
+  .hero-back img {
+    width: 62.5rem;
+    height: 35rem;
+  }
+
   .hero-info {
     padding-top: 1.5rem;
-  }
-
-  .hero-middle {
-    background-size: cover;
-    border-radius: 1rem;
-    left: 20rem;
-    width: 55rem;
-    height: 36rem;
-  }
-
-  .slider {
-    width: 20rem;
-    margin-bottom: -4rem;
-    margin-left: 25rem;
-  }
-
-  .hero-right {
-    width: 20rem;
-    height: 43rem;
   }
 
   .plant-collection img {
