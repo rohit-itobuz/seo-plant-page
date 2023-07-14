@@ -1,39 +1,81 @@
-let slide_index = 1;
-displaySlides(slide_index);
-
+const slides = document.getElementsByClassName("show-slide");
+const dots = document.getElementsByClassName("dot");
+const slidesCollection = document.getElementsByClassName("show-slide-collection");
+const slidesClients = document.getElementsByClassName("show-slide-clients");
+let slideIndex = 1;
+let collectionIndex = 1;
+let clientsIndex = 1;
 
 function nextSlide(n) {
-    displaySlides(slide_index += n);
+    displaySlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-    displaySlides(slide_index = n);
+    displaySlides((slideIndex = n));
 }
 
-
 function displaySlides(n) {
-    let i;
-    const slides = document.getElementsByClassName("show-slide");
-    const dots = document.getElementsByClassName("dot")
-
     if (n > slides.length) {
-        slide_index = 1;
-    }
-    else if (n < 1) {
-        slide_index = slides.length;
+        slideIndex = 1;
+    } else if (n < 1) {
+        slideIndex = slides.length;
     }
 
-    // Hide all slides
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
-      }
+    }
 
-    // Show the current slide and dots
-    slides[slide_index - 1].style.display = "block";
-    dots[slide_index - 1].className += " active";
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
 
+function nextSlideCollection(n) {
+    displaySlidesCollection((collectionIndex += n));
+}
+
+function currentSlideCollection(n) {
+    displaySlidesCollection((collectionIndex = n));
+}
+
+function displaySlidesCollection(n) {
+    if (n > slidesCollection.length) {
+        collectionIndex = 1;
+    } else if (n < 1) {
+        collectionIndex = slidesCollection.length;
+    }
+
+    for (let j = 0; j < slidesCollection.length; j++) {
+        slidesCollection[j].style.display = "none";
+    }
+    slidesCollection[collectionIndex - 1].style.display = "block";
+}
+
+function nextSlideClients(n) {
+    displaySlidesClients((clientsIndex += n));
+}
+
+function currentSlideB(n) {
+    displaySlidesClients((clientsIndex = n));
+}
+
+function displaySlidesClients(n) {
+    let b;
+    if (n > slidesClients.length) {
+        clientsIndex = 1;
+    } else if (n < 1) {
+        clientsIndex = slidesClients.length;
+    }
+
+    for (let k = 0; k < slidesClients.length; k++) {
+        slidesClients[k].style.display = "none";
+    }
+    slidesClients[clientsIndex - 1].style.display = "block";
+}
+
+displaySlides(slideIndex);
+displaySlidesCollection(collectionIndex);
+displaySlidesClients(clientsIndex);

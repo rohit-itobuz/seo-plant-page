@@ -67,7 +67,6 @@ body {
   display: none;
 }
 
-/* slide start */
 .show-slide {
   display: none;
 }
@@ -79,10 +78,12 @@ body {
   font-size: 1.5rem;
   border-radius: 50%;
 }
+
 .left:hover,
 .right:hover {
   background-color: rgb(255, 191, 0);
 }
+
 .dot {
   cursor: pointer;
   height: 12px;
@@ -114,15 +115,86 @@ body {
     opacity: 1;
   }
 }
-/* scroll end */
 
-.plant-collection img {
-  width: 18rem;
+.show-slide-collection {
+  display: none;
+}
+
+.show-slide-collection img {
+  width: 100%;
+}
+
+.slider-container-collection {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.transition-collection {
+  animation-name: fade;
+  animation-duration: 1s;
+  scroll-behavior: auto;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.collection-left,
+.collection-right {
+  border-radius: 50%;
+  background-color: white;
 }
 
 .collection-icon-left:hover,
 .collection-icon-right:hover {
-  scale: 1.15;
+  scale: 1.2;
+}
+
+.quote-right {
+  bottom: 10px;
+}
+
+.show-slide-clients {
+  display: none;
+}
+
+.slider-container-clients {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.transition-clients {
+  animation-name: fade;
+  animation-duration: 1s;
+  scroll-behavior: auto;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider-container-clients {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 .journey-leaf {
@@ -312,12 +384,6 @@ input {
 
   .clients {
     position: relative;
-    width: 100%;
-  }
-
-  .quote-right {
-    bottom: 0.3rem;
-    padding-left: 5rem;
   }
 
   .clients-image {
@@ -380,10 +446,6 @@ input {
     width: 70%;
   }
 
-  .quote-right {
-    padding-left: 1.5rem;
-  }
-
   .copy-right {
     margin-left: 2.5rem;
   }
@@ -418,10 +480,6 @@ input {
 
   .hero-info {
     padding-top: 1.5rem;
-  }
-
-  .plant-collection img {
-    width: 22rem;
   }
 
   .journey-leaf {
@@ -466,10 +524,6 @@ input {
   .ask-us form {
     width: 45rem;
     height: 33rem;
-  }
-
-  .quote-right {
-    padding-left: 29rem;
   }
 
   .care-left p {

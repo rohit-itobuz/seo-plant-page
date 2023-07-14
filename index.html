@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="./bootstrap-5.3.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap-5.3.0-dist/css/bootstrap.min.css" />
   <title>Plant Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,62 +78,68 @@
             href="#">Buy a plant</a>
         </div>
         <div class="d-flex gap-4 mt-3 mt-md-5 gap-xl-5">
-          <a class="g3E8847" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a class="g3E8847" href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a class="g3E8847" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
         </div>
       </div>
       <div class="slider-container mt-2">
-          <div class="show-slide transition hero-middle">
-              <img src="./image/plant-leaf.png" alt="leaf-plant">
-          </div>
-          <div class="show-slide transition hero-right">
-              <img src="./image/hero-leaf.png" alt="hero-leaf">
-          </div>
-          <div class="show-slide transition hero-back">
-            <img src="./image/hero-plant.png" alt="hero-plant">
+        <div class="show-slide transition hero-middle">
+          <img src="./image/plant-leaf.png" alt="leaf-plant" />
         </div>
+        <div class="show-slide transition hero-right">
+          <img src="./image/hero-leaf.png" alt="hero-leaf" />
+        </div>
+        <div class="show-slide transition hero-back">
+          <img src="./image/hero-plant.png" alt="hero-plant" />
+        </div>
+      </div>
     </div>
-  </div>
-    
-  <div class="hero-slider d-flex gap-3 justify-content-center">
-    <button class="left border" onclick="nextSlide(-1)"><i class="fa-solid fa-caret-left fs-2 p-2"></i></button>
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-  <button class="right border" onclick="nextSlide(1)"><i class="fa-solid fa-caret-right fs-2 p-2"></i></button>
-  </div>
-  </section>
-  
 
+    <div class="hero-slider d-flex gap-3 justify-content-center">
+      <button class="left border" onclick="nextSlide(-1)">
+        <i class="fa-solid fa-caret-left fs-2 p-2"></i>
+      </button>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <button class="right border" onclick="nextSlide(1)">
+        <i class="fa-solid fa-caret-right fs-2 p-2"></i>
+      </button>
+    </div>
+  </section>
   <!-- hero section end -->
 
   <!-- Plant collection section start -->
-  <section class="plant-collection m-3 mt-5">
+  <section class="plant-collection m-2 mt-5 m-md-5">
     <h2 class="text-center g09270D py-2">Plant collection</h2>
-    <div class="d-flex flex-wrap gap-4 justify-content-center fs-5 mt-5 gap-xl-5">
-      <div>
-        <img src="/image/bird.png" alt="Bird of paradise" />
-        <p class="g09270D py-3">Bird of paradise</p>
+
+    <div class="d-flex gap-4 gap-xl-0 flex-wrap justify-content-center mt-5">
+      <div class="slider-container-collection mt-2">
+        <div class="show-slide-collection transition-collection">
+          <img src="/image/plant-collection-a.png" alt="plant-collection-a" />
+        </div>
+        <div class="show-slide-collection transition-collection">
+          <img src="/image/plant-collection-b.png" alt="plant-collection-b" />
+        </div>
+        <div class="show-slide-collection transition-collection">
+          <img src="/image/plant-collection-c.png" alt="plant-collection-c" />
+        </div>
       </div>
-      <div>
-        <img src="/image/rubber.png" alt="Rubber plants" />
-        <p class="g09270D py-3">Rubber plants</p>
-      </div>
-      <div>
-        <img src="/image/string.png" alt="String of pearls" />
-        <p class="g09270D py-3">String of pearls</p>
-      </div>
-      <div class="d-flex gap-3 fs-2 flex-md-column justify-content-center">
-        <a href="#"><i class="fa-solid fa-circle-chevron-right g09270D collection-icon-left"></i></a>
-        <a href="#"><i class="fa-solid fa-circle-chevron-left gF5C771 opacity-50 collection-icon-right"></i></a>
+
+      <div class="collection-slider d-flex gap-3 flex-xl-column justify-content-center">
+        <button class="collection-left border border-success" onclick="nextSlideCollection(-1)">
+          <i class="fa-solid fa-angle-right g09270D collection-icon-left p-2"></i>
+        </button>
+        <button class="collection-right border border-warning" onclick="nextSlideCollection(1)">
+          <i class="fa-solid fa-angle-left gF5C771 collection-icon-right p-2"></i>
+        </button>
       </div>
     </div>
   </section>
   <!-- Plant collection section end -->
 
   <!-- Our journey section start -->
-
   <section class="journey d-flex flex-column flex-md-row m-3 me-0 mt-5">
     <div class="journey-left">
       <img class="" src="/image/our-journey.png" alt="our-journey" />
@@ -217,9 +223,9 @@
         </button>
 
         <span class="d-flex gap-4 justify-content-end">
-          <a class="g3E8847" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a class="g3E8847" href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a class="g3E8847" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a class="g3E8847" href="#" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
         </span>
       </form>
     </div>
@@ -261,28 +267,66 @@
   <!-- What clients talk about us section start -->
   <section class="m-3 mt-5">
     <h2 class="g09270D mx-md-4 py-2">What clients talk about us</h2>
-    <div class="d-flex flex-column flex-md-row gap-3 gap-lg-5 justify-content-around mt-5">
-      <i class="fa-solid fa-circle-play align-self-center clients-icon-left g3E8847"></i>
-      <div class="clients justify-content-center px-5">
-        <img class="clients-image" src="/image/clients.png" alt="clients" />
-        <div class="clients-talk p-3 px-5">
-          <i class="fa-solid fa-quote-left fs-1 g3E8847 quote-left"></i>
-          <p class="g727272 p-md-1 px-md-5 position-relative">
-            It is a long established fact that a reader will be distracted b
-            the readable content of a page when It is a long .I is a long .It
-            is a long established fact that a reader will be . It is a lon
-            established fact that a reader .<i
-              class="fa-solid fa-quote-right fs-1 g3E8847 quote-right position-absolute"></i>
-          </p>
+    <div class="d-flex flex-column flex-md-row justify-content-around">
+      <a class="clients-left align-self-center" onclick="nextSlideClients(-1)">
+        <i class="fa-solid fa-circle-play clients-icon-left g3E8847"></i>
+      </a>
+
+      <div class="slider-container-clients mt-2 clients px-5">
+        <div class="show-slide-clients transition-clients">
+          <img class="clients-image" src="/image/clients-a.png" alt="clients-a" />
+          <div class="clients-talk p-4 px-5">
+            <i class="fa-solid fa-quote-left fs-1 g3E8847 quote-left"></i>
+            <p class="g727272 p-md-1 px-md-5 position-relative">
+              It is a long established fact that a reader will be distracted b
+              the readable content of a page when It is a long .I is a long
+              .It is a long established fact that a reader will be . It is a
+              lon established fact that a reader .
+            </p>
+            <p class="text-end pe-5"><i class="fa-solid fa-quote-right fs-1 g3E8847 quote-right position-absolute"></i>
+            </p>
+          </div>
         </div>
+        <div class="show-slide-clients transition-clients">
+          <img class="clients-image" src="/image/clients-b.png" alt="clients-b" />
+          <div class="clients-talk p-4 px-5">
+            <i class="fa-solid fa-quote-left fs-1 g3E8847 quote-left"></i>
+            <p class="g727272 p-md-1 px-md-5 position-relative">
+              It is a long established fact that a reader will be distracted b
+              the readable content of a page when It is a long .I is a long
+              .It is a long established fact that a reader will be . It is a
+              lon established fact that a reader .
+            </p>
+            <p class="text-end pe-5"><i class="fa-solid fa-quote-right fs-1 g3E8847 quote-right position-absolute"></i>
+            </p>
+          </div>
+        </div>
+        <div class="show-slide-clients transition-clients">
+          <img class="clients-image" src="/image/clients-c.png" alt="clients-c" />
+          <div class="clients-talk p-4 px-5">
+            <i class="fa-solid fa-quote-left fs-1 g3E8847 quote-left"></i>
+            <p class="g727272 p-md-1 px-md-5 position-relative">
+              It is a long established fact that a reader will be distracted b
+              the readable content of a page when It is a long .I is a long
+              .It is a long established fact that a reader will be . It is a
+              lon established fact that a reader .
+            </p>
+            <p class="text-end pe-5"><i class="fa-solid fa-quote-right fs-1 g3E8847 quote-right position-absolute"></i>
+            </p>
+          </div>
+        </div>
+
       </div>
-      <i class="fa-solid fa-circle-play align-self-center clients-icon-right g3E8847"></i>
+      <a class="clients-right align-self-center " onclick="nextSlideClients(1)">
+        <i class="fa-solid fa-circle-play clients-icon-right g3E8847"></i>
+      </a>
     </div>
   </section>
   <!-- What clients talk about us section end -->
 
   <!-- Plant care section start -->
-  <section class="plant-care d-flex flex-column m-3 mt-5 gap-5 flex-md-row m-md-0 mt-md-5 gap-md-2 justify-content-between">
+  <section
+    class="plant-care d-flex flex-column m-3 mt-5 gap-5 flex-md-row m-md-0 mt-md-5 gap-md-2 justify-content-between">
     <div class="care-left p-2 px-md-3 p-lg-0 px-lg-5">
       <h2 class="g09270D">Plant care</h2>
       <p class="g727272 mt-3 mt-xl-5">
@@ -313,10 +357,10 @@
           established fact that a reader will be distracted by the.
         </p>
         <div class="d-flex gap-3">
-          <i class="fa-brands fa-instagram g81AF75 fs-1"></i>
-          <i class="fa-brands fa-facebook g81AF75 fs-1"></i>
-          <i class="fa-brands fa-youtube g81AF75 fs-1"></i>
-          <i class="fa-brands fa-twitter g81AF75 fs-1"></i>
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram g81AF75 fs-1"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-facebook g81AF75 fs-1"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-youtube g81AF75 fs-1"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-twitter g81AF75 fs-1"></i></a>
         </div>
       </div>
 
@@ -366,6 +410,6 @@
   <!-- footer section end -->
 
   <script src="/js/main.js"></script>
-</body>
 
+</body>
 </html>
