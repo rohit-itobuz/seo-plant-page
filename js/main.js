@@ -2,6 +2,7 @@ const slides = document.getElementsByClassName("show-slide");
 const dots = document.getElementsByClassName("dot");
 const slidesCollection = document.getElementsByClassName("show-slide-collection");
 const slidesClients = document.getElementsByClassName("show-slide-clients");
+
 let slideIndex = 1;
 let collectionIndex = 1;
 let clientsIndex = 1;
@@ -63,7 +64,6 @@ function currentSlideB(n) {
 }
 
 function displaySlidesClients(n) {
-    let b;
     if (n > slidesClients.length) {
         clientsIndex = 1;
     } else if (n < 1) {
