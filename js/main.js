@@ -64,6 +64,7 @@ function currentSlideB(n) {
 }
 
 function displaySlidesClients(n) {
+    
     if (n > slidesClients.length) {
         clientsIndex = 1;
     } else if (n < 1) {
